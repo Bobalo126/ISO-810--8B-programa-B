@@ -28,12 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            lblCedula = new Label();
+            pbCheque = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pbCheque).BeginInit();
+            SuspendLayout();
+            // 
+            // lblCedula
+            // 
+            lblCedula.AutoSize = true;
+            lblCedula.Location = new Point(71, 36);
+            lblCedula.Name = "lblCedula";
+            lblCedula.Size = new Size(62, 20);
+            lblCedula.TabIndex = 0;
+            lblCedula.Text = "Cédula: ";
+            // 
+            // pbCheque
+            // 
+            pbCheque.Location = new Point(96, 88);
+            pbCheque.Name = "pbCheque";
+            pbCheque.Size = new Size(601, 259);
+            pbCheque.SizeMode = PictureBoxSizeMode.Zoom;
+            pbCheque.TabIndex = 1;
+            pbCheque.TabStop = false;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(pbCheque);
+            Controls.Add(lblCedula);
+            Name = "Form1";
+            Text = "Form1";
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)pbCheque).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label lblCedula;
+        private PictureBox pbCheque;
     }
 }
