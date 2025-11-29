@@ -35,12 +35,15 @@ namespace ISO_810__8B_programa_B
             }
 
             string rutaJpg = Path.Combine(_carpetaImagenes, _cedula + ".jpg");
+            string rutaJpeg = Path.Combine(_carpetaImagenes, _cedula + ".jpeg");
             string rutaPng = Path.Combine(_carpetaImagenes, _cedula + ".png");
 
             string rutaEncontrada = null;
 
             if (File.Exists(rutaJpg))
                 rutaEncontrada = rutaJpg;
+            else if (File.Exists(rutaJpeg))
+                rutaEncontrada = rutaJpeg;
             else if (File.Exists(rutaPng))
                 rutaEncontrada = rutaPng;
 
